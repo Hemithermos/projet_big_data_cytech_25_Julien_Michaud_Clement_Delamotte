@@ -66,6 +66,10 @@ object Download {
 
     println(s"Données écrites dans MinIO : $outputPath")
 
+    val test = spark.read.parquet(outputPath)
+    test.printSchema()
+    test.show(5, false)
+
     spark.stop()
   }
 }
