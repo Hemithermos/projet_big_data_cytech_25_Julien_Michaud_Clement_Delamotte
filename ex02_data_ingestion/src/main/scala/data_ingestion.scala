@@ -108,7 +108,7 @@ object LoadFactTrip {
         coalesce(col("cbd_congestion_fee"), lit(0.0)).cast("decimal(10,2)").as("cbd_congestion_fee"),
         coalesce(col("total_amount"), lit(0.0)).cast("decimal(10,2)").as("total_amount")
       )
-      .repartition(8) // ajuste selon ta machine
+      .repartition(8) 
 
     val props = new Properties()
     props.setProperty("user", jdbcUser)
