@@ -7,7 +7,7 @@ import joblib
 import os
 import sys
 
-LOAD_PATH = "models/random_forest_model.joblib"
+LOAD_PATH = "../ex05_ml_prediction_service/models/random_forest_model.joblib"
 
 if not os.path.exists(LOAD_PATH):
     print(f"{LOAD_PATH} does not exist! Verify if your trained a usable model with the command: uv run machine_learning.py")

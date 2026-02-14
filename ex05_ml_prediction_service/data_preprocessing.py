@@ -63,7 +63,7 @@ def load_yearly_raw_data() -> dd.DataFrame:
     # Find all parquet files for the specified months
     months = []
     for month in MONTHS:
-        months.extend(["s3://" + f for f in fs.glob(f"raw/yellow_tripdata/year=2025/{month}/part-*.parquet")])
+        months.extend(["s3://" + f for f in fs.glob(f"s3a://nyc-raw/yellow_tripdata/year=2025/{month}/part-*.parquet")])
 
     # Lazy loading with Dask (data isn't loaded into memory yet)
     raw_data = dd.read_parquet(
