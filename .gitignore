@@ -51,3 +51,4 @@ minio-data
 sql
 ### Hadoop ###
 hadoop
+/data/processed/clean_data.*
